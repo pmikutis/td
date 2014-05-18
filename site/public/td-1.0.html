@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel Diary</title>
+	<meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<link rel="stylesheet" href="css/jquery.mobile.css" />
+	<link rel="stylesheet" href="css/td-1.0.css" />
+
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile.js"></script>
+	<script src="js/underscore.js"></script>
+	<script src="js/backbone.js"></script>
+	<script src="js/iscroll.js"></script>
+
+	<script src="js/td-1.0.js"></script>
+	<script src="js/jquery.iscroll.js"></script>
+	
+</head>
+<body>
+
+<div id="main" data-role="page" class="app-page">
+
+	<div data-role="header" data-position="fixed">
+		<h1 id="titlebar">{{-title}}</h1>
+        <a id="settings" data-icon="gear" class="ui-btn-left">Settings</a>
+		<a id="add" data-icon="plus" class="ui-btn-right">Add Trip</a>
+		<a id="cancel" data-icon="delete" class="ui-btn-right">Cancel</a>
+	</div>
+
+	<div data-role="content">
+
+		<ul id="list" data-role="listview">
+			<li id="{{-id}}" class="tm">
+				<span class="check">&nbsp;</span>
+				<span class="text">{{-text}} Location: <a href={{-gps_url}}>Map</a></span>
+				<div id="delete_{{-id}}" class="delete">Delete</div>
+			</li>
+		</ul>
+
+	</div>
+
+	<div id="newitem" data-role="fieldcontain" class="ui-grid-a">
+        <div class="ui-block-a">
+        	<input type="text" id="text" placeholder="Enter To Do item"/>
+        	<a id="save" data-role="button" data-inline="true" data-mini="true" data-icon="check">Save</a> 
+        </div>
+
+        <div class="ui-block-b">
+            <p>Tag Location</p>            
+            <select id="locate" name="locate" data-mini="true" data-role="slider">
+                <option value="off">Off</option>
+                <option value="on">On</option>
+            </select>
+        </div>
+
+    </div>
+
+</div>
+
+        <div id="settings" data-role="page" class="app-page">
+            <div data-role="header" data-position="fixed">
+                <h1 id="titlebar">Settings</h1>
+                <a id="goback" data-icon="home" class="ui-btn-right">Go Back</a>
+            </div>
+            <div data-role="settingscontent">
+            	<div class="ui-block-a">Font Size: <input type="text" id="fontsize" placeholder=		"Choose Font Size"/><a id="savefont" data-role="button" data-inline="true" data-mini="true" data-icon="check">Save</a> <p> Authentication settings</p>
+            		Username: <input type="text" id="username" placeholder=		"Enter Username"/>Password: <input type="password" id="passwd" placeholder="	  Enter password"/>Confirm Password:
+            		<input type="password" id="confirmpasswd" placeholder="Confirm password"/>
+        			<a id="updatecredentials" data-role="button" data-inline="true" data-mini="true" data-icon="check">Update Credentials</a> 
+        		</div>
+          
+
+            </div>
+        </div>
+
+</body>
+</html>

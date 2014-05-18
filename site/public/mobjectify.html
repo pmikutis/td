@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css">
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<link rel="stylesheet" href="jquery.mobile-1.1.0.custom.css?" />
+<script>
+http://www.mobjectify.com/edit/hjgjhgjhghjgjghjnkjk
+</script>
+</head>
+<body>
+
+<div id="index" data-url="index" data-role="page" data-theme="c">
+<div data-role="header" data-theme="c">
+<h1>Travel Diary</h1>
+<div data-role="navbar">
+<ul>
+<li><a id="#settings_btn" href="#settings" data-theme="c" data-icon="gear">Settings</a></li>
+<li><a id="add_trip_btn" href="#add_trip" data-theme="c" data-icon="plus">Add Trip</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role="content">
+
+<ul id="trip_list" data-role="listview" data-filter="true">
+<li data-role="list-divider">My Trips</li>
+<li>My First Trip</li>
+<li>Tramore Trip</li>
+<li>Dunmore trip</li>
+</ul>
+<span id="index_content"><br>Click Add to ad new trip</span>
+
+</div></div>
+
+<div id="settings" data-url="settings" data-role="page" data-theme="c">
+<div data-role="header" data-theme="c">
+<h1>Settings</h1>
+<div data-role="navbar">
+<ul>
+<li><a id="settings_done_btn" href="" data-icon="check">Done</a></li>
+<li><a id="settings_cancel" href="#index" data-icon="delete">Cancel</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role="content">
+
+<form id="settings_form" method="GET">
+
+<div data-role="fieldcontain">
+<label for="inp_tw14">Username</label>
+<input type="text" name="username" id="inp_tw14" />
+</div>
+
+<div data-role="fieldcontain">
+<label for="inp_tw15">Password</label>
+<input type="password" name="passwd" id="inp_tw15" />
+</div>
+
+<div data-role="fieldcontain">
+<label for="inp_tw16">Confirm Password</label>
+<input type="password" name="confirm_passwd" id="inp_tw16" />
+</div>
+
+<div data-role="fieldcontain">
+<label for="rng_tw17">Font Size</label>
+<input type="range" name="font_size" id="rng_tw17" value="10" min="5" max="15" />
+</div>
+</form>
+
+</div></div>
+
+<div id="add_trip" data-url="add_trip" data-role="page">
+<div data-role="header">
+<h1>Create New Trip</h1>
+<div data-role="navbar">
+<ul>
+<li><a id="save_new_trip_btn" href="" data-icon="check">Save Trip</a></li>
+<li><a id="add_trip_cancel" href="#index" data-icon="delete">Cancel</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role="content">
+<div data-role="fieldcontain">
+<label for="inp_tw23">Trip Name</label>
+<input type="text" name="add_trip_name" id="inp_tw23" />
+</div>
+<div data-role="fieldcontain">
+<label for="txt_tw24">Trip Description</label>
+<textarea name="add_trip_description" id="txt_tw24" rows="" cols=""></textarea>
+</div>
+
+<ul data-role="listview" data-inset="true">
+<li data-role="list-divider">Add photos to the trip</li>
+</ul>
+
+<div id="photo_btn_group" data-role="controlgroup" data-type="horizontal">
+<input id="upload_photo_btn" type="button" value="Upload Photo"/>
+<input id="take_picture_btn" type="button" value="Take Picture"/>
+</div>
+<div data-role="fieldcontain">
+<fieldset data-role="controlgroup">
+<legend></legend>
+<input id="start_trip_checkbox_1" type="checkbox" name="start_trip_checkbox" value="Start trip here" checked="checked"/><label for="start_trip_checkbox_1">Start trip here</label><input id="start_trip_checkbox_2" type="checkbox" name="start_trip_checkbox" value="Use/Show Distance" checked="checked"/><label for="start_trip_checkbox_2">Use/Show Distance</label>
+</fieldset>
+</div>
+
+</div></div>
+
+<div id="trip_details" data-url="trip_details" data-role="page">
+<div data-role="header">
+<h1>Trip Details</h1>
+<div data-role="navbar">
+<ul>
+<li><a href="">Edit</a></li>
+<li><a href="#index" data-icon="home">Go Back</a></li>
+<li><a href="" data-icon="check">Save</a></li>
+<li><a href="" data-icon="delete">Cancel</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role="content">
+<div data-role="fieldcontain">
+<label for="inp_tw36"></label>
+<input type="text" name="trip_details_name" id="inp_tw36" />
+</div>
+<div data-role="fieldcontain">
+<label for="inp_tw40">Location</label>
+<input type="text" name="trip_details_location" id="inp_tw40" />
+</div>
+<div data-role="fieldcontain">
+<label for="txt_tw37"></label>
+<textarea name="trip_details_description" id="txt_tw37" rows="" cols=""></textarea>
+</div>
+<input type="button" data-icon="arrow-r" value="Trip Photos"/>
+
+<ul id="trip_day_list" data-role="listview">
+<li>Day 1</li>
+<li>Day 2</li>
+<li>Day 3</li>
+</ul>
+
+</div></div>
+
+<div id="Day_page" data-url="Day_page" data-role="page" data-theme="c">
+<div data-role="header" data-theme="c">
+<h1>Trip Details: Day 1</h1>
+<div data-role="navbar">
+<ul>
+<li><a id="day_gobck_btn" href="#trip_details" data-icon="arrow-l">Go Back</a></li>
+<li><a id="day_edit_details_btn" href="" data-icon="grid">Edit Details</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role="content">
+<div data-role="fieldcontain">
+<label for="inp_tw50">Day Locations</label>
+<input type="text" name="day_locations" id="inp_tw50" />
+</div>
+<div data-role="fieldcontain">
+<label for="txt_tw49">DayDescription</label>
+<textarea name="day_description" id="txt_tw49" rows="" cols=""></textarea>
+</div>
+<a id="day_photos" href="" data-role="button" data-icon="arrow-r">Day&#39;s Photos</a>
+
+</div></div>
+
+</body>
+</html>
