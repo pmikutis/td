@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "org.coenraets.employeedirectory"
+        versionCode = "10"
+        version     = "1.1.0">
+ 
+    <name>Travel Diary</name>
+ 
+    <description>
+        Simple Travel Diary App by Paulius
+    </description>
+ 
+    <author href="http://www.wit.ie" email="alwaysthefirst@gmail.com>
+        Paulius Mikutis
+    </author>
+ 
+    <feature name="http://api.phonegap.com/1.0/camera"/>
+ 
+</widget>
